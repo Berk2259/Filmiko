@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:filmiko/widget/alert_dialog_widget.dart';
+import 'package:filmiko/Screen/Screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,7 +17,10 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 80.0),
         child: FloatingActionButton(
           onPressed: () {
-            AlertDialogWidget();
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => InfoScreen()),
+            );
           },
           child: Icon(Icons.add),
         ),
